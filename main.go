@@ -23,16 +23,16 @@ var m = map[string]codes{
 
 func adder(x1 int, x2 int, x3 int, x4 int, symbols string) int {
 	result := 0
-	print_info := "S = "
+	printInfo := "S = "
 	for i := 0; i < 7; i++ {
 		s, _ := strconv.Atoi(string(symbols[i]))
 
 		if i == x1 || i == x2 || i == x3 || i == x4 {
 			result += s
-			print_info += strconv.Itoa(s) + " + "
+			printInfo += strconv.Itoa(s) + " + "
 		}
 	}
-	fmt.Println(print_info[:len(print_info)-3] + " = " + strconv.Itoa(result%2))
+	fmt.Println(printInfo[:len(printInfo)-3] + " = " + strconv.Itoa(result%2))
 	return result % 2
 }
 
